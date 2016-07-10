@@ -1,6 +1,15 @@
 {
   "name": "assignment-1",
-  "version": "1",
-  "description": "An module for ITC298 class assignment 1. Creates a basic server with home and about page.",
-  "author": "Mitchell Thompson <thomitchell@gmail.com>",
+  "version": "1.0.0",
+  "description": "a module for ITC298 class assignment 1. creates a basic server with home and about page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitchthompson/itc298-sum16/tree/master/assignment-1"
+  },
+  "author": "mitchell thompson",
+  "license": "ISC"
 }
