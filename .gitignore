@@ -1,5 +1,12 @@
+#ignore packages installed by npm
+node_modules
+
+#textbook exercises
+/exercises
+
+#Misc files
 .DS_Store
 .DS_Store?
-/exercises
+*.bak
 
 

@@ -1,0 +1,16 @@
+{
+  "name": "assignment-2",
+  "version": "1.5.0",
+  "description": "A module for ITC298 class assignment 2. Creates a web server with home and about page. User can search for tech term on home page and /search displays result.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitchthompson/itc298-sum16/tree/master/assignment-2"
+  },
+  "author": "mitchell thompson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
