@@ -1,0 +1,25 @@
+<form method="POST" action="/search">
+    <fieldset>
+        <input type="text" name="term" placeholder="tech term" required maxlength="50">
+        <button>SEARCH</button>
+    </fieldset>
+</form>
+{{#if removed}}
+    <h3>Entry Deleted!</h3>
+{{/if}}
+<ul>
+    {{#each terms}}
+    <li>
+        <h4><a href="/detail/{{term}}">{{term}}</a></h4>
+        <p>{{defined}}</p>
+    </li>
+    {{/each}}
+</ul>
+<form method="POST" action="/add">
+    <fieldset>
+        <legend>Add Entry</legend>
+        <input type="text" name="term" placeholder="tech term" required maxlength="50">
+        <input type="text" name="defined" placeholder="definition" required maxlength="500">
+        <button>ADD A NEW TERM</button>
+    </fieldset>
+</form>

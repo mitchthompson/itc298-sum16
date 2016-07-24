@@ -1,0 +1,50 @@
+{{!-- {{show if updated entry}} --}}
+{{#if updated}}
+    <h3>{{term.term}} entry updated!</h3>
+{{/if}}
+
+{{!-- {{show if added new entry}} --}}
+{{#if added}}
+    <h3>Entry added!</h3>
+{{/if}}
+{{#if notAdded}}
+    <h3>Term already in list. You can update or delete.</h3>
+{{/if}}
+
+{{!-- {{show if search for term not found}} --}}
+{{#if result}}
+    <h3>{{term}} not found</h3>
+<form method="POST" action="/add">
+    <fieldset>
+        <legend>Add Entry</legend>
+        <input type="text" name="term" placeholder="{{term}}" value="{{term}}"   required maxlength="50">
+        <input type="text" name="defined" placeholder="definition" required maxlength="500">
+        <button>ADD</button>
+    </fieldset>
+</form>
+{{/if}}
+
+{{#unless result}}
+<ul>
+    <li>
+        <h2>{{term.term}}</h2>
+        <p>{{term.defined}}</p>
+    </li>
+</ul>
+
+<form method="POST" action="/update">
+    <fieldset>
+        <legend>Update Entry</legend>
+        <input type="text" name="term" placeholder="{{term.term}}" value="{{term.term}}"   required maxlength="50">
+        <input type="text" name="defined" placeholder="definition" required maxlength="500">
+        <button>Update</button>
+    </fieldset>
+</form>
+<form method="POST" action="/delete">
+    <fieldset>
+        <legend>Delete Entry</legend>
+        <input type="text" name="term" placeholder="{{term.term}}" value="{{term.term}}" required maxlength="50">
+        <button>Delete</button>
+    </fieldset>
+</form>
+{{/unless}}
