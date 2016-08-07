@@ -1,17 +1,15 @@
 {
-  "name": "assignment3ex",
+  "name": "Tech Terms App",
   "version": "1.0.0",
-  "description": "example exercise for assignment 3c",
+  "description": "A querable list of common tech terms powered by node.js, express, and MongoDB.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "mitchell thompson",
+  "author": "Mitchell Thompson",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cors": "^2.7.1",
     "express": "^4.14.0",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.5.8"
   }
 }

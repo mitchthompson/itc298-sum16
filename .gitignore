@@ -4,6 +4,8 @@ node_modules
 #textbook exercises
 /exercises
 
+/lib/credentials.js
+
 #Misc files
 .DS_Store
 .DS_Store?
