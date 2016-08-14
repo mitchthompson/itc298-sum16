@@ -16,7 +16,7 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 var routes = require('./lib/routes.js')(app);
-var testDB = require('./test_db.js');
+//var testDB = require('./test_db.js');
 
 
 //404 catch-all handler
