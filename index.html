@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Tech Terms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">  
+  </head>
+<script>
+    var termsApp = angular.module('termsApp',[]);
+    termsApp.controller('TermsController', ['$scope', function($scope) {
+
+        $scope.techTerms = [
+            {term: "MVC", defined: "A software architectural pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user."},
+            {term: "Node.js", defined: "An open-source, cross-platform runtime environment for developing server-side Web applications. Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript."},
+            {term: "Express.js", defined: "A Node.js web application server framework, designed for building single-page, multi-page, and hybrid web applications. It is the de facto standard server framework for node.js."},
+            {term: "Javascript", defined: "An object-oriented computer programming language commonly used to create interactive effects within web browsers."},
+            {term: "jQuery", defined: "A JavaScript library that allows web developers to add extra functionality to their websites. It is open source and provided for free under the MIT license. In recent years, jQuery has become the most popular JavaScript library used in web development."},
+        ];
+        
+        $scope.detail = function(item) { 
+            $scope.showTerm = item.term;
+            $scope.showDefined = item.defined;
+        };
+
+        
+    }]);
+
+    
+</script>
+
+<body ng-app="termsApp">
+    <header class="container"><h1>Tech Terms</h1></header>
+    <div ng-controller="TermsController">
+        <div class="container">
+            <div class="row">
+                <div class="search col-sm-4">
+                    <p><input type="text" placeholder="search" ng-model="search"></p> 
+                    <p>There are {{techTerms.length}} tech terms in list.</p>
+                </div>
+                <div class="details col-sm-8">
+                    <h3>{{showTerm}}</h3>  
+                    <p>{{showDefined}}</p>
+                </div>
+           
+                <div class="terms col-sm-12">
+                    <ul class="list-unstyled" ng-repeat="techTerm in techTerms | orderBy : 'term' | filter: search">
+                        <li><a ng-click="detail(techTerm)">{{ techTerm.term }}</a></li>
+                    </ul>
+            
+                </div>
+
+            
+            </div><!--row-->
+        </div><!--container-->
+    </div><!--TermsController-->
+        <footer class="container">&copy; Mitchell Thompson</footer>
+</body>
+</html>
