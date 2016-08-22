@@ -4,6 +4,7 @@ var app = express();
 //express setup
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/../public'));
+app.use(require("body-parser").json()); 
 app.use(require("body-parser").urlencoded({extended: true}));
 app.use('/api', require('cors')()); // set Access-Control-Allow-Origin header for api route
 
