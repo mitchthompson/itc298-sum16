@@ -1,5 +1,5 @@
 {
-  "name": "Tech Terms App",
+  "name": "TechTermsApp",
   "version": "1.0.0",
   "description": "A querable list of common tech terms powered by node.js, express, and MongoDB.",
   "main": "index.js",
